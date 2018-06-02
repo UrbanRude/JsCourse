@@ -1,28 +1,31 @@
+//TEMPLATES LITERALS
+const producto1 = 'Pizza',
+      precio1 = 30,
+      producto2 = 'Hamburguesa',
+      precio2 = 40;
 
-// MANEJO DE OPERACIONES AVANZADAS
+let html;
 
-let resultado = Math.PI;
+// DE MANERA ANTIGUA
+// html = '<ul>'+
+//        '<li>Orden: '+producto1+'</li>'+
+//        '<li>Precio: '+precio1+'</li>'+
+//        '<li>Orden: '+producto2+'</li>'+
+//        '<li>Precio: '+precio2+'</li>'+
+//        '<li>Total: '+(precio1+precio2)+'</li>'+
+//        '</ul>';
 
-//REDONDEAR HACIA ARRIBA
-console.log(Math.ceil(resultado));
+html = `
+     <ul>
+        <li> Orden: ${producto1} </li>
+        <li> Precio: ${precio1} </li>
+        <li> Orden: ${producto2} </li>
+        <li> Precio: ${precio2} </li>
+        <li> Total: ${total()}</li>
+`;
 
-//REDONDER HACIA ABAJO
-console.log(Math.floor(resultado));
+function total(){
+    return precio1+precio2;
+}
 
-//RAIZ CUADRADA
-console.log(Math.sqrt(64));
-
-//NUMERO ABSOLUTO
-console.log(Math.abs(-5));
-
-//POTENCIA
-console.log(Math.pow(2,4));
-
-//MINIMO
-console.log(Math.min(4,6,23,5,1));
-
-//MAXIMO
-console.log(Math.max(4,6,23,5,2));
-
-//NUMERO ALEATORIO
-console.log(Math.random());
+document.getElementById('app').innerHTML = html;
