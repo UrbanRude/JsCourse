@@ -1,32 +1,28 @@
 
-let nombre = prompt('Cual es tu nombre');
-let edad = prompt('Cual es tu edad');
+// MANEJO DE OPERACIONES AVANZADAS
 
-document.getElementById('app').innerHTML = `Bienvenido ${nombre.toUpperCase()} y tu edad es ${edad} y tu nombre tiene ${nombre.length} letras`;
+let resultado = Math.PI;
 
-//MANEJO DE STRING Y SUS METODOS
+//REDONDEAR HACIA ARRIBA
+console.log(Math.ceil(resultado));
 
-let mensaje = 'Aprendiendo JavaScript, CSS, HTML para Frontend';
+//REDONDER HACIA ABAJO
+console.log(Math.floor(resultado));
 
-//SUBSTRAER DE UNA CADENA
-console.log(mensaje.substring(0,11));
+//RAIZ CUADRADA
+console.log(Math.sqrt(64));
 
-//COLOCAR UN NUMERO NEGATIVO EMPIEZA DE LA DERECHA A LA IZQUIERDA
-console.log(mensaje.slice(-11));
+//NUMERO ABSOLUTO
+console.log(Math.abs(-5));
 
-//CON DOS PARAMETROS EL PRIMERO ES PARA IDICAR DONDE EMPIEZA Y EL SEGUNDO SON LOS ELEMENTOS A CORTAR
-console.log(mensaje.slice(0,11));
+//POTENCIA
+console.log(Math.pow(2,4));
 
-//PARA SEPARAR UNA CADENA CADA VEZ QUE ENCUENTRE UN CARACTER, REGRESA UN CARACTER
-console.log(mensaje.split(' '));
-console.log(mensaje.split(', '));
+//MINIMO
+console.log(Math.min(4,6,23,5,1));
 
-//PARA REMPLAZAR 
-console.log(mensaje.replace('CSS','PHP'));
+//MAXIMO
+console.log(Math.max(4,6,23,5,2));
 
-//PARA ENCONTRAR UNA CADENA DE TEXTO DENTRO DE OTRA CADENA
-console.log(mensaje.includes('HTML'));
-
-//REPETIR LA CADENA
-let repetir = 'JavaScript';
-console.log(repetir.repeat(10));
+//NUMERO ALEATORIO
+console.log(Math.random());
