@@ -1,31 +1,68 @@
-//TEMPLATES LITERALS
-const producto1 = 'Pizza',
-      precio1 = 30,
-      producto2 = 'Hamburguesa',
-      precio2 = 40;
+//ARREGLOS
 
-let html;
+// ARREGLO DE INT
+const numeros = [10,23,4,3,14,65,7,23];
+console.log(numeros);
 
-// DE MANERA ANTIGUA
-// html = '<ul>'+
-//        '<li>Orden: '+producto1+'</li>'+
-//        '<li>Precio: '+precio1+'</li>'+
-//        '<li>Orden: '+producto2+'</li>'+
-//        '<li>Precio: '+precio2+'</li>'+
-//        '<li>Total: '+(precio1+precio2)+'</li>'+
-//        '</ul>';
+//ARREGLO MEZCLADO
+// const mezclado = [true,'true',20,'Hello',24.2];
+// console.log(mezclado);
 
-html = `
-     <ul>
-        <li> Orden: ${producto1} </li>
-        <li> Precio: ${precio1} </li>
-        <li> Orden: ${producto2} </li>
-        <li> Precio: ${precio2} </li>
-        <li> Total: ${total()}</li>
-`;
+//ARREGLO DE ENTEROS
+const meses =  new Array('Enero','Febrero','Marzo','Abril');
+console.log(meses);
+console.log(meses.length);
+console.log(Array.isArray(meses));
 
-function total(){
-    return precio1+precio2;
-}
+//AGREGAR UN ELEMENTO AL FINAL EN UN ARREGLO 
+meses.push('Mayo');
+console.log(meses);
+console.log(meses.length);
+console.log(Array.isArray(meses));
 
-document.getElementById('app').innerHTML = html;
+//ENCONTRAR UN ELEMENTO DENTRO DEL ARREGLO 
+console.log(meses.indexOf('Abril'));
+
+//AGREGAR UN ELEMENTO AL INICIO EN UN ARREGLO 
+meses.unshift('Prueba');
+console.log(meses);
+
+//ELMINAR EL ULTIMO ELEMENTO DE UN ARREGLO
+meses.pop();
+console.log(meses);
+
+//ELIMINAR EL PRIMER ELEMENTO DE UN ARREGLO
+meses.shift();
+console.log(meses);
+
+//ELIMINAR UN ELEMENTO EN ESPECIFICO
+meses.splice(3,1);
+console.log(meses);
+
+//REVERTIR UN ARREGLO
+meses.reverse();
+console.log(meses);
+
+//UNIR ARREGLOS
+console.log(numeros.concat(meses));
+
+//ORDENAR UN ARREGLO
+const frutas = ['Zanahoria','Platano','Manzana','Fresas','Naranja'];
+frutas.sort();
+console.log(frutas);
+
+//ORDENAR UN ARREGLO DE MENOR A MAYOR
+numeros.sort((a,b) => {
+    return a - b;
+});
+console.log(numeros);
+
+//ORDENAR UN ARREGLO DE MAYOR A MENOR
+numeros.sort((a,b) => {
+    return b - a;
+});
+console.log(numeros);
+
+
+
+
