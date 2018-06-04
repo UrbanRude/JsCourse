@@ -1,21 +1,33 @@
-// MANEJANDO ERRORES CON TRY-CATCH
+// Manejando Fechas en JavaScript
 
-try {
-    funcionFake();
-} catch (error) {
-    console.log(error);
-}finally{
-    console.log('Se ejecuta siempre');
-}
+const diaHoy = new Date();
 
+// FECHA EN ESPECIFICO
+let navidad2017 = new Date('12-25-2017');
 
-function obtenerClientes(){
-    console.log('Descargando');
-    setTimeout( () => {
-        console.log('Completo');
-    },3000);
-}
+console.log(navidad2017);
 
+let valor;
 
+// MES  
+valor = diaHoy.getMonth();
 
-obtenerClientes();
+// DIA DEL MES
+valor = diaHoy.getDate();
+// DIA DE LA SEMANA
+valor = diaHoy.getDay();
+
+// MINUTOS
+valor = diaHoy.getHours();
+
+// MILISEGUNDOS DESDE 1970
+valor = diaHoy.getTime();
+
+// RETORNAR EL AÑO 
+valor = diaHoy.getFullYear();   
+
+// SETEAR EL AÑO
+valor = diaHoy.setFullYear(2016);
+valor = diaHoy.getFullYear();  
+
+console.log(valor);
