@@ -1,29 +1,32 @@
-// Arreglo de objetos 
+// Funciones con JavaScript
 
-const autos = [
-    {
-        modelo: 'Mustang',
-        motor: '6.0'
-    },
-    {
-        modelo: 'Camaro',
-        motor: '7.0'
-    },
-    {
-        modelo: 'Challenger',
-        motor: '9.0'
-    }
-]
+// Funcion Declaration
 
-autos.forEach(element => {
-    console.log(`Imprimir con foreach`);
-    console.log(element);
-});
+function saludar(nombre = 'Visitante') {
+    /* FORMA ANTIGUA
+    if(typeof nombre === 'undefined'){
+        nombre = 'Pablo';
+    }*/
+    console.log(`Huevos perro ${nombre}`);
+} 
 
-for( let i = 0; i < autos.length; i++ ){
-    console.log(`Imprimir con for`);
-    console.log(autos[i]);
+saludar();
+
+function sumar(a,b){
+    console.log(a + b);
 }
 
-console.log(autos);
-console.log(autos[0].modelo);
+sumar(8,4);
+
+// Function expression 
+
+const sumaEx = (a = 0 ,b = 0) =>{
+    return a + b;
+}
+
+( function(tecnologia){
+    console.log(`Aprendiendo ${tecnologia}`);
+})('JavaScript');
+
+console.log(sumaEx(3,2));
+console.log(sumaEx(3));
