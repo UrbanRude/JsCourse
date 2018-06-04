@@ -1,23 +1,29 @@
-// OBJETOS EN JAVASCRIPT
-const persona = {
-    nombre:'Urbano',
-    apellido:'Ceron',
-    profesion:'Desarrollador',
-    email:'urbano@gmail.com',
-    musica:['Ska','Regge','Pop'],
-    edad:24,
-    hogar:{
-        ciudad:'Estado de Mexico',
-        pais:'Mexico'
+// Arreglo de objetos 
+
+const autos = [
+    {
+        modelo: 'Mustang',
+        motor: '6.0'
     },
-    fechaNacimiento:function(){
-        return new Date().getFullYear() - this.edad;
+    {
+        modelo: 'Camaro',
+        motor: '7.0'
+    },
+    {
+        modelo: 'Challenger',
+        motor: '9.0'
     }
+]
+
+autos.forEach(element => {
+    console.log(`Imprimir con foreach`);
+    console.log(element);
+});
+
+for( let i = 0; i < autos.length; i++ ){
+    console.log(`Imprimir con for`);
+    console.log(autos[i]);
 }
 
-console.log(persona);
-console.log(persona.email);
-console.log(persona.musica[1]);
-console.log(persona.hogar.pais);
-console.log(persona.fechaNacimiento());
-
+console.log(autos);
+console.log(autos[0].modelo);
