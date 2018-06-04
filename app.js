@@ -1,32 +1,21 @@
-// Funciones con JavaScript
+// MANEJANDO ERRORES CON TRY-CATCH
 
-// Funcion Declaration
-
-function saludar(nombre = 'Visitante') {
-    /* FORMA ANTIGUA
-    if(typeof nombre === 'undefined'){
-        nombre = 'Pablo';
-    }*/
-    console.log(`Huevos perro ${nombre}`);
-} 
-
-saludar();
-
-function sumar(a,b){
-    console.log(a + b);
+try {
+    funcionFake();
+} catch (error) {
+    console.log(error);
+}finally{
+    console.log('Se ejecuta siempre');
 }
 
-sumar(8,4);
 
-// Function expression 
-
-const sumaEx = (a = 0 ,b = 0) =>{
-    return a + b;
+function obtenerClientes(){
+    console.log('Descargando');
+    setTimeout( () => {
+        console.log('Completo');
+    },3000);
 }
 
-( function(tecnologia){
-    console.log(`Aprendiendo ${tecnologia}`);
-})('JavaScript');
 
-console.log(sumaEx(3,2));
-console.log(sumaEx(3));
+
+obtenerClientes();
