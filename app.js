@@ -1,33 +1,34 @@
-// Manejando Fechas en JavaScript
+// Manejo de ForEach, Map, Iterator
 
-const diaHoy = new Date();
+const pendientes = ['Tarea','Correr','Proyecto','Aprender Programacion'];
 
-// FECHA EN ESPECIFICO
-let navidad2017 = new Date('12-25-2017');
+pendientes.forEach( (item,idex) => {
+    console.log(`${idex} : ${item}`);
+});
 
-console.log(navidad2017);
+console.log(pendientes);
 
-let valor;
+const carrito = [
+    { id:1, producto:'Libro'},
+    { id:1, producto:'Playera'},
+    { id:1, producto:'Guitarra'},
+    { id:1, producto:'Disco'}
+];
 
-// MES  
-valor = diaHoy.getMonth();
+const nombreProducto = carrito.map( (carrito) => {
+    return carrito.producto;
+});
 
-// DIA DEL MES
-valor = diaHoy.getDate();
-// DIA DE LA SEMANA
-valor = diaHoy.getDay();
+console.log(carrito);
+console.log(nombreProducto);
 
-// MINUTOS
-valor = diaHoy.getHours();
+const automovil = {
+    modelo:'Camaro',
+    motor:6.1,
+    anio:1993,
+    marca:'Chevrolet'
+}
 
-// MILISEGUNDOS DESDE 1970
-valor = diaHoy.getTime();
-
-// RETORNAR EL AÑO 
-valor = diaHoy.getFullYear();   
-
-// SETEAR EL AÑO
-valor = diaHoy.setFullYear(2016);
-valor = diaHoy.getFullYear();  
-
-console.log(valor);
+for(let auto in automovil){
+    console.log(`${auto} : ${automovil[auto]}`);
+}
